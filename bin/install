@@ -33,4 +33,4 @@ install_pack() {
     chmod +x "${install_path}/bin/pack"
 }
 
-install_kind "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
+install_pack "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
