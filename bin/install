@@ -17,7 +17,7 @@ install_pack() {
     esac
 
     download="https://github.com/buildpacks/pack/releases/download/v${install_version}/pack-v${install_version}-${os}.tgz"
-    filename="${install_path}/bin/kind"
+    filename="${install_path}/bin/pack"
 
     if [ ! -d "${install_path}/bin" ]; then
         mkdir -p "${install_path}/bin"
