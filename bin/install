@@ -17,14 +17,14 @@ install_pack() {
     esac
 
     download="https://github.com/buildpacks/pack/releases/download/v${install_version}/pack-v${install_version}-${os}.tgz"
-    filename="${install_path}/bin/pack"
+    filename="${install_path}/bin/pack.tgz"
 
     if [ ! -d "${install_path}/bin" ]; then
         mkdir -p "${install_path}/bin"
     fi
 
     curl --silent --location --create-dirs --output "$filename" "$download"
-    unzip -j "$filename" -d "${install_path}/bin"
+    tar --extract --strip-components=1 --directory="${install_path}/bin" --file="$filename"
     chmod +x "${install_path}/bin/pack"
 }
 
