@@ -16,11 +16,6 @@ install_pack() {
     *) os="linux" ;;
     esac
 
-    if [ "$arch" = "other" ]; then
-        echo "Unsupported architecture $(uname -m). Only x64 binaries are available."
-        exit
-    fi
-
     download="https://github.com/buildpacks/pack/releases/download/v${install_version}/pack-v${install_version}-${os}.tgz"
     filename="${install_path}/bin/kind"
 
