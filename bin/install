@@ -24,7 +24,10 @@ install_pack() {
     fi
 
     curl --silent --location --create-dirs --output "$filename" "$download"
-    tar --extract --strip-components=1 --directory="${install_path}/bin" --file="$filename"
+    tar -v --extract --strip-components=1 --directory="${install_path}/bin" --file="$filename"
+
+    tree "${install_path}"
+
     chmod +x "${install_path}/bin/pack"
 }
 
