@@ -23,8 +23,8 @@ install_pack() {
         mkdir -p "${install_path}/bin"
     fi
 
-    curl --silent --location --create-dirs --output "$source_path" "$download_url"
-    unzip -j "$source_path" -d "${install_path}/bin"
+    curl --silent --location --create-dirs --output "$filename" "$download_url"
+    unzip -j "$filename" -d "${install_path}/bin"
     chmod +x "${install_path}/bin/pack"
 }
 
