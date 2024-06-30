@@ -11,7 +11,7 @@ jobs:
   plugin_test:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [macos-13, macos-latest, ubuntu-latest]
         ver: [0.10.0]
 
     runs-on: ${{ matrix.os }}
